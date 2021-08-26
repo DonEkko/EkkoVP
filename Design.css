@@ -1,0 +1,53 @@
+@import "./buttons.css";
+
+body{
+    background-color: rgb(202, 6, 6);
+font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.wrapper {
+    max-inline-size: 900px;
+    margin: auto;
+}
+
+.player {
+    margin-block-start: 100px;
+    position: relative;
+}
+
+.player video {
+    inline-size: 100%;
+    border: 10px solid black;
+    vertical-align: middle;
+   
+}
+
+.player-title {
+    color: white;
+    position: absolute;
+    inset-block-start: 0px;
+    inset-inline-start: 20px;
+}
+
+.player-buttons {
+    position: absolute;
+    inset: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    size: 80px;
+    z-index: 2;
+
+}
+
+.player-overlay {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: .6s opacity;
+}
+
+.player:hover .player-overlay{
+    opacity: 1;
+}
